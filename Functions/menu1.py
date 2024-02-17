@@ -61,7 +61,7 @@ def menu1(dates):
                 elif numBackSlashes == 2 and date[i] != "/":
                     year += date[i]
                 
-                #conditional statement which evaluates to True if the character at index i of date is not equal to "/"
+                #conditional statement which evaluates to True if the character at index i of date is equal to "/"
                 elif date[i] == "/": 
                     numBackSlashes += 1   
             
