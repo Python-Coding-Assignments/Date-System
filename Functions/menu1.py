@@ -7,8 +7,7 @@ def menu1(dates):
     #declaration and initialization of local variables
     date = month = day = year = ""
     numBackSlashes = 0
-    flag = flag2 = flag3 = False
-    listOfInputs = []
+    flag = flag2 = False
     dateObject = Date()
 
     print("You are now creating a new date!\nEnter the date in one of the following formats:")
@@ -66,21 +65,7 @@ def menu1(dates):
                     numBackSlashes += 1   
             
             #conditional statement which evaluates to True if the following conditions are met
-            if numBackSlashes == 2 and len(month) > 0 and len(day) > 0 and len(year) > 0:
-                #for loop which iterates over the integers between zero, inclusive, and the length of listOfInputs, exclusive
-                for i in range(0, len(listOfInputs)):
-                    flag3 = False
-
-                    #for loop which iterates over the integers between zero, inclusive, and the length of listOfInputs[i], exclusive
-                    for j in range(0, len(listOfInputs[i])):
-                        #conditional statement which evaluates to True if listOfInputs[i][j] is equal to "0" and flag3 is False
-                        if listOfInputs[i][j] == "0" and flag3 == False:
-                            listOfInputs[i][j].replace("0", "")
-
-                        #conditional statement which evaluates to True if listOfInputs[i][j] is equal to "0"    
-                        elif listOfInputs[i][j] != "0":
-                            flag3 = True    
-
+            if numBackSlashes == 2 and len(month) > 0 and len(day) > 0 and len(year) > 0: 
                 #conditional statement which evaluates to True if the function validDate returns True
                 if dateObject.validDate(int(month), int(day), int(year)) == True:
                     #setting month, day, and year to instance of date and appending this instance to list called dates
